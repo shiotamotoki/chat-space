@@ -1,0 +1,16 @@
+.chat-side
+  .chat-side-header
+    .chat-side-header__box
+      .chat-side-header__box__user-name
+        seo
+      .chat-side-header__box__menu
+        =link_to "/groups/new", class: "chat-side-header__box__menu__new-group" do
+          =fa_icon 'edit'
+        =link_to "/users/31/edit", class: "chat-side-header__box__menu__edit-user" do
+          =fa_icon 'cog'
+  .chat-side-groups
+    .chat-side-groups-group
+      .chat-side-groups-group-name
+        sample
+      .chat-side-groups-group-message
+        Good bye world!

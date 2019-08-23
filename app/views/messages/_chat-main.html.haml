@@ -1,0 +1,33 @@
+.chat-main
+  .chat-main-header
+    .chat-main-header__left-box
+      .chat-main-header__left-box__current-group
+        sample
+      .chat-main-header__left-box__member-list
+        Member: seo neko
+    %input.chat-main-header__edit-btn{name: "commit", type: "submit", value: "Edit"}
+  .chat-main-messages
+    .chat-main-messages-message
+      .chat-main-messages-message__upper-info
+        .chat-main-messages-message__upper-info__talker
+          seo
+        .chat-main-messages-message__upper-info__date
+          2019/08/21(Wed) 12:00:00
+      .chat-main-messages-message__text
+        Hello world!
+    .chat-main-messages-message
+      .chat-main-messages-message__upper-info
+        .chat-main-messages-message__upper-info__talker
+          neko
+        .chat-main-messages-message__upper-info__date
+          2019/08/21(Wed) 12:00:00
+      .chat-main-messages-message__text
+        Good bye world!
+  .chat-main-form
+    .chat-main-form-new-message
+      .chat-main-form-new-message-input-box
+        %input.chat-main-form-new-message-input-box__text{name: "content", placeholder: "type a message", type: "text"}
+        %label.chat-main-form-new-message-input-box__image{for: "image1"} 
+          =fa_icon 'image' 
+          %input.chat-main-form-new-message-input-box__image__file{name: "image", type: "file", id: "image1"}
+      %input.chat-main-form-new-message-submit-btn{name: "commit", type: "submit", value: "Send"}
