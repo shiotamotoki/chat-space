@@ -10,7 +10,9 @@
           =fa_icon 'cog', class: 'icon'
   .chat-side-groups
     .chat-side-groups-group
-      .chat-side-groups-group-name
-        sample
-      .chat-side-groups-group-message
-        Good bye world!
+      - current_user.groups.each do |group|
+        = link_to '#' do
+          .chat-side-groups-group-name
+            = group.name
+          .chat-side-groups-group-message
+            メッセージはまだありません。
