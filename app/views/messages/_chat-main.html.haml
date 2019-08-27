@@ -2,9 +2,11 @@
   .chat-main-header
     .chat-main-header__left-box
       .chat-main-header__left-box__current-group
-        sample
+        = @group.name
       .chat-main-header__left-box__member-list
-        Member: seo neko
+        Member:
+        - @group.users.each do |user|
+          = user.name
     %input.chat-main-header__edit-btn{name: "commit", type: "submit", value: "Edit"}
   .messages
     = render @messages
