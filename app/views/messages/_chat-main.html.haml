@@ -6,29 +6,13 @@
       .chat-main-header__left-box__member-list
         Member: seo neko
     %input.chat-main-header__edit-btn{name: "commit", type: "submit", value: "Edit"}
-  .chat-main-messages
-    .chat-main-messages-message
-      .chat-main-messages-message__upper-info
-        .chat-main-messages-message__upper-info__talker
-          seo
-        .chat-main-messages-message__upper-info__date
-          2019/08/21(Wed) 12:00:00
-      .chat-main-messages-message__text
-        Hello world!
-    .chat-main-messages-message
-      .chat-main-messages-message__upper-info
-        .chat-main-messages-message__upper-info__talker
-          neko
-        .chat-main-messages-message__upper-info__date
-          2019/08/21(Wed) 12:00:00
-      .chat-main-messages-message__text
-        Good bye world!
-    .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
-
+  .messages
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
