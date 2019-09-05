@@ -7,8 +7,7 @@
         Member:
         - @group.users.each do |user|
           = user.name
-    .chat-main-header__edit-btn
-      =link_to "Edit", edit_group_path(@group.id)
+    %input.chat-main-header__edit-btn{name: "commit", type: "submit", value: "Edit"}
   .messages
     = render @messages
   .form
